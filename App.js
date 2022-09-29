@@ -20,6 +20,7 @@ const Shape = styled.View`
 `
 export default function App(){
   console.log("changed")
+  console.log(windowHeight)
   return(
     <Body>
       <Title>
