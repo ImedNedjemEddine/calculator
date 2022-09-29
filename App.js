@@ -19,7 +19,7 @@ const Shape = styled.View`
   width:${windowWidth*0.3}px;
 `
 export default function App(){
-  
+  console.log("changed")
   return(
     <Body>
       <Title>
