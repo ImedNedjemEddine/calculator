@@ -1,7 +1,7 @@
 import React,{useState,useContext} from 'react';
 import {TouchableOpacity} from 'react-native';
 import {ThemeContext} from "styled-components/native";
-import { Body , Title , Shape , Button ,ResultPlace ,Result, NightMoode , DarkSwitch } from '../components/calculator.styles';
+import { Body , Title , Shape , Button,ButtonsWrapper ,ResultPlace ,Result, NightMoode , DarkSwitch } from '../components/calculator.styles';
 export const CalculatorScreen = () =>{
   const {light, dark} = useContext(ThemeContext);
   const [operation, setOperation] = useState('')
@@ -17,6 +17,7 @@ export const CalculatorScreen = () =>{
   return(
 
     <Body style={{backgroundColor:color.background}}>
+        <ButtonsWrapper>
     {valuesAndOperators.map((x)=><TouchableOpacity key={x} onPress={()=>onClick(x)}><Shape style={{backgroundColor:color.button}}><Title style={{color:color.font}}>{x}</Title></Shape></TouchableOpacity>)}
     <TouchableOpacity  onPress={()=>setOperation('')}>
         <Button style={{backgroundColor:color.button}}>
@@ -38,6 +39,7 @@ export const CalculatorScreen = () =>{
             <Title style={{color:color.font}}>%</Title>
         </Button>
     </TouchableOpacity>
+    </ButtonsWrapper>
     <ResultPlace style={{borderColor:"transparent",backgroundColor:color.display}}>
         <Result style={{color:color.font}}>
             {operation}

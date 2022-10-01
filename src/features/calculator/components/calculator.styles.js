@@ -31,8 +31,18 @@ export const Button = styled.View`
   border-radius:10px;
   margin:7px;
 `
+export const ButtonsWrapper = styled.View`
+flex-wrap: wrap-reverse;
+  flex-direction:row;
+  justify-content:center;
+  flex:1;
+  padding:${windowHeight*0.02}px;
+  height:${windowHeight*0.6}px;
+  width:${windowWidth*0.8}px;
+  margin:7px;
+`
 export const ResultPlace = styled.View`
-  height:${windowHeight*0.25}px;
+  height:${windowHeight*0.22}px;
   width:${windowWidth*0.83}px;
   flex:1;
   background-color:${(props)=>props.theme.light.display};
@@ -41,7 +51,7 @@ export const ResultPlace = styled.View`
   margin:30px;
   padding:10px;
   position:absolute;
-  top:80px;
+  top:${windowHeight*0.1}px;
   align-items:center;
   justify-content:center;
   
